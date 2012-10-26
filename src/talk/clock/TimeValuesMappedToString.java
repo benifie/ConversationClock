@@ -21,7 +21,7 @@ public class TimeValuesMappedToString {
 		MinuteMap.put(12, "twelve");
 		MinuteMap.put(13, "thirteen");
 		MinuteMap.put(14, "fourteen");
-		MinuteMap.put(15, "quarter past");
+		MinuteMap.put(15, "fifteen");
 		MinuteMap.put(16, "sixteen");
 		MinuteMap.put(17, "seventeen");
 		MinuteMap.put(18, "eighteen");
@@ -36,7 +36,7 @@ public class TimeValuesMappedToString {
 		MinuteMap.put(27, "twenty seven");
 		MinuteMap.put(28, "twenty eight");
 		MinuteMap.put(29, "twenty nine");
-		MinuteMap.put(30, "half past");
+		MinuteMap.put(30, "thirty");
 		MinuteMap.put(31, "twenty nine");
 		MinuteMap.put(32, "twenty eight");
 		MinuteMap.put(33, "twenty seven");
@@ -51,7 +51,7 @@ public class TimeValuesMappedToString {
 		MinuteMap.put(42, "eighteen");
 		MinuteMap.put(43, "seventeen");
 		MinuteMap.put(44, "sixteen");
-		MinuteMap.put(45, "quarter to");
+		MinuteMap.put(45, "fifteen");
 		MinuteMap.put(46, "fourteen");
 		MinuteMap.put(47, "thirteen");
 		MinuteMap.put(48, "twelve");
