@@ -45,6 +45,7 @@ public class ConverseClock {
 
 	public String minuteString()
 	{
+		String singularOrPlural = minute == 1? "minute" : "minutes";
 		if (minute <= 30 && minute != 0)
 		{	if(minute == 15)
 			{
@@ -54,7 +55,7 @@ public class ConverseClock {
 			{
 				return "half past";
 			}
-			return String.format("%s minutes past", timeValuesMappedToString.MinuteMap.get(minute));
+			return String.format("%s %s past", timeValuesMappedToString.MinuteMap.get(minute), singularOrPlural);
 		}
 		if (minute > 30)
 		{
@@ -62,7 +63,7 @@ public class ConverseClock {
 			{
 				return String.format("quarter to");
 			}
-			return String.format("%s minutes to", timeValuesMappedToString.MinuteMap.get(minute));
+			return String.format("%s %s to", timeValuesMappedToString.MinuteMap.get(minute), singularOrPlural);
 		}	
 		return "";		
 	}
