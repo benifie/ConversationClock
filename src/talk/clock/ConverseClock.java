@@ -28,17 +28,19 @@ public class ConverseClock {
 	
 	public String theTimeIs()
 	{
-		String theTimeIs = "the time is";
-		if (hour == 0 && minute == 0)
+		String timeIs = "the time is";
+		if (minute == 0)
 		{
-			return theTimeIs + " 12 midnight";
-		}
-		if (hour == 12 && minute == 0)
-		{
-			return theTimeIs + " 12 noon";
-		}
+            switch (hour)
+            {
+                case 0:
+                    return String.format("%s %s", timeIs, "12 midnight");
+                case 12:
+                    return String.format("%s %s", timeIs, "12 noon");
+            }
+        }
 		String amOrPm = hour >= 12 ? "(PM)" : "(AM)";
-		return String.format("%s %s %s %s", theTimeIs, minuteString(), hourString(), amOrPm);
+		return String.format("%s %s %s %s", timeIs, minuteString(), hourString(), amOrPm);
 	}
 	
 	public String minuteString()
