@@ -11,7 +11,7 @@ public class TestClass {
 	public void ifTimeIs12midnight(){
 		
 		ConverseClock talk = new ConverseClock(0, 0);
-		assertEquals(talk.theTimeIs(), "the time is 12 midnight");
+		assertEquals(talk.theTimeIs(), "the time is twelve midnight");
 		
 	}
 	
@@ -19,7 +19,7 @@ public class TestClass {
 	public void ifTimeIs12noon(){
 		
 		ConverseClock talk = new ConverseClock(12, 0);
-		assertEquals(talk.theTimeIs(), "the time is 12 noon");
+		assertEquals(talk.theTimeIs(), "the time is twelve noon");
 		
 	}
 	

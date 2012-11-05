@@ -29,18 +29,21 @@ public class ConverseClock {
 	public String theTimeIs()
 	{
 		String timeIs = "the time is";
-		if (minute == 0)
+		return String.format("%s %s%s %s", timeIs, minuteString(), hourString(), aMPmNoonOrMidnight());
+	}
+	
+	public String aMPmNoonOrMidnight(){
+		switch(minute)
 		{
-            switch (hour)
-            {
-                case 0:
-                    return String.format("%s %s", timeIs, "12 midnight");
-                case 12:
-                    return String.format("%s %s", timeIs, "12 noon");
-            }
-        }
-		String amOrPm = hour >= 12 ? "(PM)" : "(AM)";
-		return String.format("%s %s %s %s", timeIs, minuteString(), hourString(), amOrPm);
+			case 0:
+				if (hour == 0){
+					return "midnight";
+				}
+				if (hour == 12){
+					return "noon";
+				}
+		}
+		return hour >=12 ? "(PM)" : "(AM)";
 	}
 	
 	public String minuteString()
@@ -50,16 +53,16 @@ public class ConverseClock {
 			case 0:
 				return "";
 			case 15:
-				return "quarter past";
+				return "quarter past ";
 			case 30:
-				return "half past";
+				return "half past ";
 			case 45:
-				return "quarter to";
+				return "quarter to ";
 		}
 		
 		//from here on, minute should be a value between 1 and 59 excluding 15, 30 and 45
-		String singularOrPlural = minute == 1? "minute" : "minutes";
-		String toOrPast = minute < 30 ? "past" : "to";		
+		String singularOrPlural = minute == 1 ? "minute" : "minutes";
+		String toOrPast = minute < 30 ? "past " : "to ";		
 		
 		return String.format("%s %s %s", timeValuesMappedToString.MinuteMap.get(minute), singularOrPlural, toOrPast);
 	}
